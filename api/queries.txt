@@ -1,0 +1,6 @@
+UPDATE cglbrd.ENTRIES SET Accesses = Accesses + 1 WHERE EntryID = '1740'
+hi there
+hi there
+hi there
+hi there
+hi there

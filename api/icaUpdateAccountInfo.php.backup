@@ -1,0 +1,60 @@
+<?  
+
+include("$_SERVER[DOCUMENT_ROOT]/includes/authenticate.php");
+
+gatekeeper($TT_Username_OPTIONAL);
+
+header("Content-Type: text/html; charset=utf-8");
+header("Cache-Control: no-cache, must-revalidate");
+header("Pragma: no-cache");
+
+if (!$REMOTE_ACCOUNT) {
+   exit;
+}
+
+#$result = _mysql_get_records("SELECT cityid FROM Users where `userid` = '$REMOTE_ID' AND `username` = '$REMOTE_USER'", &$cityinfo);
+
+#$current_cityid = $cityinfo[0][cityid];
+
+$result1 = _mysql_do("UPDATE ACCOUNTS
+              SET Country      = IF('$Country' <> '', '$country', Country),
+                  Province       = IF('$province' <> '', '$province', Province),
+                  City         = IF('$city' <> '', '$city', city),
+                  cityid       = IF('$cityid' <> '', '$cityid', cityid),
+                  Cmail        = IF('$email' <> '', '$email', email),
+                  Email_Alternate  = IF('$emailalternate' <> '', '$emailalternate', Email_Alternate),
+                  Community        = '$community',
+                  SecurityQuestion = '$securityquestion',
+                  SecurityAnswer   = '$securityanswer',
+                  First_Name       = '$firstname',
+                  Last_Name        = '$lastname',
+                  Address          = '$address',
+                  Postal_Code      = '$postalcode',
+                  Zone             = '$zone', 
+                  DST              = '$dst',
+                  Gender           = '$gender',
+                  Birthdate        = '$birthdate'
+            WHERE Account = '$REMOTE_ACCOUNT' && UserID = '$REMOTE_USER'");
+
+$result2 = _mysql_do("UPDATE ACTOPTIONS
+              SET NotifyMe = '$mailnotification',
+                  MailConf = '$mailconfirmation',
+                  IncludeSig = '$includesig',
+                  Inactive = '$inactiveflag',
+                  Signature = '$mailsignature'
+            WHERE Account = '$REMOTE_ACCOUNT'");
+
+$result = _mysql_do("UPDATE ONLINE
+              SET  City = '$city', Province = '$province', Country='$country', Community = '$community',
+                   Gender = '$gender',
+                   Heartbeat = now()
+              WHERE Account = '$REMOTE_ACCOUNT'");
+
+if ($result >= 0) {
+   print "{success: true}\n";
+}
+else {
+   print "{success: false, errors: { reason: 'Unable to update account information ($mysql_errmsg). Please try again.' }}\n";
+}
+
+?>

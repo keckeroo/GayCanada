@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GayCanada</title>
+    <link rel="stylesheet" href="resources/css/default/app.css">
+
+<STYLE>
+
+.gcHeader { height: 100px; border: solid 0px #000000; position: relative; overflow: hide;}
+.redcorner { width: 140px; padding: 0px; margin: 0px; height: 100px; overflow: crop; background: url(/images/newtop/upperright.gif); float: left;}
+.people    { width: 500px; padding: 0px; margin: 0px; height: 100px; overflow: hide; background: url(/images/newtop/003.gif); float: left; }
+.gcdotcom  { position:absolute; top: 5px; right: 20px; }
+.commands  { position:absolute; top: 80px; right: 20px; }
+
+
+/*
+ * MENUTREE CSS CONFIGURATIONS
+ */
+.ux-menutree { font-family: arial, tahoma, helvetica, san-serif; font-size: 11px; }
+.ux-menutree img.x-tree-icon-parent { display: none; } /* Hide folder icons */
+.ux-menutree .x-tree-elbow, .ux-menutree .x-tree-elbow-end, .ux-menutree .x-tree-elbow-line, .ux-menutree .x-tree-elbow-empty { height: 18px; width: 0px; }
+
+.ux-menutree .ux-menutree-group {
+    background:#ddd url(data:image/png;base64,R0lGODlhAQAXAIcAAOLi4uPj4+Tk5OXl5efn5+jo6Onp6evr6+zs7O3t7e/v7/Dw8PHx8fPz8/T09PX19fb29vf39wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAP8ALAAAAAABABcAAAgbACMIjAABwgMHDRgsUJAAwQEDBQgMEBAAAICAADs=); repeat-x;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:1px;
+    font-weight: bold;
+    color: #555; 
+}
+
+.ux-menutree .x-grid-row-selected .ux-menutree-group { font-weight: bold; color: #15428B; }
+.ux-menutree .x-grid-row-selected .ux-menutree-item  { font-weight: bold; color: #15428B; }
+.ux-menutree .x-tree-icon-leaf { background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACxSURBVDjL7dItC8JQAIXh491HWbDvD1pEDIIKm1zDxqKi0WIULAZFYc1msF3ErEZlMC9Mhxx/gTAR28KpDxx4QRK/DCXwAbDg0oLMTShtQF0F5AlwvwHkqy+Zxxs+lwsmvs8DKrIw8DCh8njNLOxRtxrU4yF3MFRhIBFQ2XxG3W7yXq8xjULGsIsDFwF58zzq0YBpFPDc6XIKp/iFI4S7h5BbWGoFW03gyABVtyzxT8Ab8Xzei+tkcykAAAAASUVORK5CYII=); }
+
+/* END MENUTREE CSS */
+
+.forum-ct a span { font-weight:bold; color:#222; }
+/* .forum { border:1px solid #fff; margin-left: -15px; } */
+.forum .x-tree-ec-icon { display:none; }
+ 
+
+.x-tree-selected {
+    border:1px dotted #a3bae9;
+    background:#DFE8F6;
+}
+.x-tree-node .x-tree-selected a span{
+    background:transparent;
+    color:#15428b;
+    font-weight:bold;
+}
+
+/*
+ * Missing CSS for tab text alignment
+ */
+.x-tab .x-tab-left .x-tab-inner { text-align: left; }
+.x-tab .x-tab-right .x-tab-inner { text-align: right; }
+
+.enhanced-grid-row       { background-color: gold; border: solid 2px #000000; !important;}
+
+.x-grid-cell-forum b { font-family:tahoma, verdana; display:block; color:#333; }
+.x-grid-cell-forum b i { font-weight:normal; font-style: normal; color:#000; }  
+.x-grid-cell-forum .forum { padding-left:20px; margin-left: -4px; background:transparent url(../images/silk/message.png) no-repeat 0 2px; }
+.x-grid-cell-forum .x-grid3-cell-inner { white-space:normal; }
+.x-grid-cell-forum a { color: #385F95; text-decoration:none; }
+.x-grid-cell-forum a:hover { text-decoration:underline; }
+
+
+
+</style>
+    
+    <!-- <x-compile> -->
+        <!-- <x-bootstrap> -->
+            <script src="../ext/ext-dev.js"></script>
+            <script src="bootstrap.js"></script>
+        <!-- </x-bootstrap> -->
+        <script src="app/app.js"></script>
+    <!-- </x-compile> -->
+</head>
+<body></body>
+</html>

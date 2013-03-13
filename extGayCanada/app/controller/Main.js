@@ -1,0 +1,29 @@
+Ext.define('GayCanada.controller.Main', {
+    extend: 'Ext.app.Controller',
+
+    refs: [{
+        ref: 'main',
+        selector: 'mainview'
+    }],
+          
+    init: function() {
+       	this.control({
+        	'#homeMenu': {
+            	'menuitemclick': this.homeMenuClick
+          	},
+          	'mainview button[action=showHelp]' : { 
+            	click: this.showHelp,
+             	tap: this.showHelp
+          	}
+       	});
+    },
+
+    showHelp: function() {
+       alert('show help');
+    },
+
+    homeMenuClick: function(a) {
+       alert('I clicked ' + a);
+    }
+
+});
